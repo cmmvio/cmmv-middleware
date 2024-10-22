@@ -1,6 +1,6 @@
 {
 	"name": "@cmmv/middleware",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"main": "dist/index.js",
 	"description": "CMMV (@middleware)",
 	"scripts": {
