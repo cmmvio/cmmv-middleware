@@ -28,7 +28,7 @@
         "allowJs": false,
         "importHelpers": true,
         "lib": ["esnext", "dom"],
-        "types": ["node", "mocha"],
+        "types": ["node"],
     },
     "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "dist", "**/*.spec.ts"]
