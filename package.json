@@ -4,11 +4,11 @@
 	"description": "Contract-Model-Model-View (CMMV) - Minimalistic Node.js Server Framework",
 	"scripts": {
 		"build": "tsc",
-		"dev": "NODE_ENV=dev nodemon --quiet",
-		"format": "prettier \"**/*.ts\" \"packages/**/*.json\" --ignore-path ./.prettierignore --write && git status",
-		"test": "pnpm run build:test && pnpm run packages:move && mocha --exit && pnpm run clean",
-		"lint": "concurrently 'pnpm run lint:packages' 'pnpm run lint:spec'",
-		"lint:fix": "concurrently 'pnpm run lint:packages -- --fix' 'pnpm run lint:spec -- --fix'",
+		"dev": "NODE_ENV=dev nodemon",
+		"format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
+		"test": "vitest",
+		"lint": "pnpm run lint:packages",
+		"lint:fix": "pnpm run lint:packages -- --fix",
 		"lint:spec": "eslint 'packages/**/**.spec.ts' --no-ignore",
 		"prepare": "husky"
 	},
@@ -20,12 +20,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/andrehrferreira/cmmv-server.git"
+		"url": "git+https://github.com/andrehrferreira/cmmv-middleware.git"
 	},
 	"author": "Andre Ferreira",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/andrehrferreira/cmmv-server/issues"
+		"url": "https://github.com/andrehrferreira/cmmv-middleware/issues"
 	},
 	"homepage": "https://cmmv.io",
 	"publishConfig": {
@@ -43,28 +43,30 @@
 		]
 	},
 	"devDependencies": {
+		"@cmmv/server": "^0.4.2",
 		"@codechecks/client": "^0.0.55",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-angular": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
-		"@hapi/hapi": "^21.3.10",
-		"@swc/helpers": "^0.5.13",
 		"@swc-node/core": "^1.13.3",
 		"@swc-node/register": "^1.10.9",
-		"@swc/core": "^1.7.26",		
+		"@swc/core": "^1.7.26",
+		"@swc/helpers": "^0.5.13",
 		"@types/node": "^22.5.4",
+		"compression": "^1.7.4",
+		"cors": "^2.8.5",
 		"esbuild": "^0.23.1",
 		"esbuild-register": "^3.6.0",
 		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-import": "2.29.1",		
-		"lint-staged": "^15.2.10",	
-		"nodemon": "^3.1.5",		
+		"eslint-plugin-import": "2.29.1",
+		"helmet": "^8.0.0",
+		"lint-staged": "^15.2.10",
+		"nodemon": "^3.1.5",
 		"prettier": "^3.3.3",
+		"supertest": "^7.0.0",
 		"tslib": "^2.7.0",
-		"typescript": "^5.6.2"
-	},
-	"dependencies": {
-		
+		"typescript": "^5.6.2",
+		"vitest": "^2.1.3"
 	}
 }
