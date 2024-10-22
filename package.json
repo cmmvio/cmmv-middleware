@@ -2,7 +2,7 @@
 	"name": "@cmmv/middleware",
 	"version": "0.4.2",
 	"main": "dist/index.js",
-	"description": "Contract-Model-Model-View (CMMV) - Minimalistic Node.js Server Framework",
+	"description": "CMMV (@middleware)",
 	"scripts": {
 		"build": "tsc",
 		"dev": "NODE_ENV=dev nodemon",
@@ -10,8 +10,7 @@
 		"test": "vitest",
 		"lint": "pnpm run lint:packages",
 		"lint:fix": "pnpm run lint:packages -- --fix",
-		"lint:spec": "eslint 'packages/**/**.spec.ts' --no-ignore",
-		"prepare": "husky"
+		"lint:spec": "eslint 'packages/**/**.spec.ts' --no-ignore"
 	},
 	"keywords": [
 		"cmmv",
