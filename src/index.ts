@@ -14,10 +14,10 @@
  * MIT Licensed
  */
 
-async function _(this: any, route, fn?) {
+async function _(this: any, route, fn?, hook = "onSend") {
     return (req, res, next) => {
         if (req.app && typeof req.app.addHook == 'function')
-            req.app.addHook('onSend', processMiddleware.bind({ route, fn }));
+            req.app.addHook(hook, processMiddleware.bind({ route, fn }));
     }
 }
 
