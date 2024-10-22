@@ -31,24 +31,30 @@ Below is a simple example of how to create a new CMMV application:
 
 ```typescript
 import cmmv from '@cmmv/server';
-import _ from '@cmmv/middleware';
-import compression from 'compression';
+import * as cors from 'cors';
+import * as compression from 'compression';
+import helmet from 'helmet';
+import _ from "./index";
 
 const app = cmmv();
 
-const host = '0.0.0.0';
-const port = 3000;
+app.use(_(cors()));
+app.use(_(helmet()));
+app.use(_(compression({ level: 6, threshold: 0 })));
 
-app.use(_(compression()));
-
-app.get('/', async (req, res) => {
+app.get("/", (req, res) => {
     res.json({Hello: "World"});
 });
 
-app.listen({ host, port })
+app.listen({ host: "127.0.0.1", port: 3000})
+.then(server => {
+    console.log(
+        `Listen on http://${server.address().address}:${server.address().port}`,
+    );
+})
 .catch(err => {
     throw Error(err.message);
-});
+});;
 ```
 
 ## Documentation
