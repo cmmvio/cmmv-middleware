@@ -2,7 +2,7 @@
 	"name": "@cmmv/middleware",
 	"version": "0.4.4",
 	"main": "dist/index.js",
-	"description": "CMMV (@middleware)",
+	"description": "Module for simplified use of Express middlewares",
 	"scripts": {
 		"build": "tsc",
 		"dev": "NODE_ENV=dev nodemon",
@@ -36,9 +36,6 @@
 	},
 	"lint-staged": {
 		"**/*.ts": [
-			"prettier --ignore-path ./.prettierignore --write"
-		],
-		"packages/**/*.json": [
 			"prettier --ignore-path ./.prettierignore --write"
 		]
 	},
