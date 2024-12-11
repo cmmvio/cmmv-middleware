@@ -1,3 +1,12 @@
+## [0.4.8](https://github.com/andrehrferreira/cmmv-middleware/compare/v0.4.7...v0.4.8) (2024-12-11)
+
+
+### Bug Fixes
+
+* release ([12223ce](https://github.com/andrehrferreira/cmmv-middleware/commit/12223cebc90f6f97b4586bf1309468aaf2942ed5))
+
+
+
 ## [0.4.7](https://github.com/andrehrferreira/cmmv-middleware/compare/v0.4.6...v0.4.7) (2024-12-11)
 
 
