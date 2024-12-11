@@ -1,3 +1,7 @@
+## [0.4.7](https://github.com/andrehrferreira/cmmv-middleware/compare/v0.4.6...v0.4.7) (2024-12-11)
+
+
+
 ## 0.4.6 (2024-12-11)
 
 
