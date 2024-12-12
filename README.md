@@ -65,7 +65,7 @@ app.listen({ host: "127.0.0.1", port: 3000})
 | `compression`     | ❌ Not Working | Middleware not working due to issues with triggering `onHeaders` event properly.       |
 | `cookie-session`  | ❌ Not Working | Middleware not functioning correctly; issues with session management and `Set-Cookie`. |
 | `express-session` | ❌ Not Working | Middleware incompatible; issues with session handling and storage.                     |
-| `serve-static`    | ⏳ Not Tested | Middleware for serving static files not yet tested.                                    |
+| `serve-static`    | ❌ Not Working | Middleware for serving static files not yet tested.                                    |
 | `body-parser`     | ✅ Working   | Middleware tested and working as expected.                                            |
 | `morgan`          | ✅ Working   | Middleware tested and working, logs requests correctly.                               |
 | `serve-favicon`   | ⏳ Not Tested | Middleware for serving favicons not yet tested.                                       |

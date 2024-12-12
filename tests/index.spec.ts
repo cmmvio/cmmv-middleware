@@ -17,7 +17,7 @@ beforeAll(async () => {
     });
 
     app.get("/not-found", (req, res) => {
-        res.status(404).end();
+        res.code(404).end();
     });
 
     server = await app.listen({ host: "127.0.0.1", port: 3001 });
@@ -33,6 +33,7 @@ describe('GET /', () => {
     it('should return Hello World with correct middlewares applied', async () => {
         //@ts-ignore
         const res = await request(server).get('/');
+        console.log(res);
         
         expect(res.status).toBe(200);
         expect(res.body).toEqual({ Hello: "World" });
@@ -63,8 +64,10 @@ describe('Middleware behavior', () => {
         });
 
         const temporaryServer = await app.listen({ host: "127.0.0.1", port: 3002 });
+
         //@ts-ignore
         const res = await request(temporaryServer).get('/no-cors');
+        //console.log(res);
 
         expect(res.status).toBe(200);
         expect(res.body).toEqual({ message: "No CORS here" });
