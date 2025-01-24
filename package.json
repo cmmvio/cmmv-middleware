@@ -1,6 +1,6 @@
 {
     "name": "@cmmv/middleware",
-    "version": "0.4.8",
+    "version": "0.4.9",
     "main": "dist/index.js",
     "description": "Module for simplified use of Express middlewares",
     "scripts": {
@@ -22,12 +22,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/andrehrferreira/cmmv-middleware.git"
+        "url": "git+https://github.com/cmmvio/cmmv-middleware.git"
     },
     "author": "Andre Ferreira",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/andrehrferreira/cmmv-middleware/issues"
+        "url": "https://github.com/cmmvio/cmmv-middleware/issues"
     },
     "homepage": "https://cmmv.io",
     "publishConfig": {
