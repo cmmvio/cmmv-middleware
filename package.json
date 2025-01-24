@@ -22,12 +22,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/andrehrferreira/cmmv-middleware.git"
+        "url": "git+https://github.com/cmmvio/cmmv-middleware.git"
     },
     "author": "Andre Ferreira",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/andrehrferreira/cmmv-middleware/issues"
+        "url": "https://github.com/cmmvio/cmmv-middleware/issues"
     },
     "homepage": "https://cmmv.io",
     "publishConfig": {
