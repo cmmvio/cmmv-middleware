@@ -1,3 +1,12 @@
+## [0.4.9](https://github.com/cmmvio/cmmv-middleware/compare/v0.4.8...v0.4.9) (2025-01-24)
+
+
+### Bug Fixes
+
+* repository ([1549c21](https://github.com/cmmvio/cmmv-middleware/commit/1549c21c2939177eb84edca8e40997ae684d6e77))
+
+
+
 ## [0.4.8](https://github.com/cmmvio/cmmv-middleware/compare/v0.4.7...v0.4.8) (2024-12-11)
 
 
