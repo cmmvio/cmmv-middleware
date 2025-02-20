@@ -40,7 +40,6 @@ app.use(_(serveFavicon(path.join(__dirname, "..", "public", "favicon.ico"))));
 serveFavicon
 
 app.use(vhost('mail.example.com', function (req, res) {
-    // handle req + res belonging to mail.example.com
     res.setHeader('Content-Type', 'text/plain')
     res.end('hello from mail!')
 }));

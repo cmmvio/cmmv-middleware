@@ -21,15 +21,18 @@ async function processMiddleware(this: any, req, res, payload, done) {
         req.app.addHook("onSend", (req, res, payload, next) => {
             try{
                 response.body = payload;
-                
-                if (response._header || response.headersSent) 
-                    return; 
-                
+
+                if (response._header || response.headersSent)
+                    return;
+
                 if (response && typeof response.writeHead === 'function')
                     response.writeHead.call(response, res.statusCode)
-                            
+
                 if(typeof next === "function")
                     next.call(this, null, payload);
+
+                if(typeof done === "function")
+                    done.bind(this);
 
                 return payload;
             }
@@ -40,9 +43,6 @@ async function processMiddleware(this: any, req, res, payload, done) {
                 return payload;
             }
         });
-
-        if(typeof next === "function")
-            next.bind(this);
 
         return payload;
     });
@@ -85,8 +85,8 @@ function createMockResponse(res) {
     });
 
     [
-        "setHeader", "getHeader", "removeHeader", 
-        "writeHead", "end", "write", "statusCode", 
+        "setHeader", "getHeader", "removeHeader",
+        "writeHead", "end", "write", "statusCode",
         "on", "emit", "get"
     ].forEach((method) => {
         if (typeof res[method] === 'function') {
