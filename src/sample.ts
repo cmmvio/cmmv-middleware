@@ -13,7 +13,7 @@ import * as serveStatic from 'serve-static';
 import * as serveFavicon from 'serve-favicon';
 import * as vhost from 'vhost';
 import helmet from 'helmet';
-import _ from "./index";
+import _ from "./main";
 
 const app = cmmv();
 
@@ -40,7 +40,6 @@ app.use(_(serveFavicon(path.join(__dirname, "..", "public", "favicon.ico"))));
 serveFavicon
 
 app.use(vhost('mail.example.com', function (req, res) {
-    // handle req + res belonging to mail.example.com
     res.setHeader('Content-Type', 'text/plain')
     res.end('hello from mail!')
 }));

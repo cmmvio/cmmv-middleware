@@ -1,17 +1,14 @@
 {
     "name": "@cmmv/middleware",
-    "version": "0.4.9",
-    "main": "dist/index.js",
+    "version": "0.5.0",
+    "main": "dist/main.js",
     "description": "Module for simplified use of Express middlewares",
     "scripts": {
-        "build": "tsc",
-        "dev": "NODE_ENV=dev nodemon",
-        "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
+        "build": "cmmv build",
+        "dev": "cmmv run ./src/sample.ts",
         "test": "vitest",
-        "lint": "pnpm run lint:packages",
-        "lint:fix": "pnpm run lint:packages -- --fix",
-        "lint:spec": "eslint 'packages/**/**.spec.ts' --no-ignore",
-        "release": "node release.js",
+        "lint": "cmmv lint",
+        "release": "cmmv release",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
     },
     "keywords": [
@@ -34,7 +31,7 @@
         "access": "public"
     },
     "engines": {
-        "node": ">= 18.18.0 || >= 20.0.0"
+        "node": ">= 20.0.0"
     },
     "lint-staged": {
         "**/*.ts": [
@@ -42,18 +39,15 @@
         ]
     },
     "devDependencies": {
+        "@cmmv/cli": "^0.5.9",
         "@cmmv/server": "^0.7.2",
         "@codechecks/client": "^0.0.55",
         "@commitlint/cli": "^19.5.0",
         "@commitlint/config-angular": "^19.5.0",
         "@commitlint/config-conventional": "^19.5.0",
-        "@swc-node/core": "^1.13.3",
-        "@swc-node/register": "^1.10.9",
-        "@swc/core": "^1.7.26",
-        "@swc/helpers": "^0.5.13",
+        "@tsconfig/node22": "^22.0.0",
         "@types/node": "^22.10.2",
         "body-parser": "^1.20.3",
-        "chalk": "^5.3.0",
         "compression": "^1.7.4",
         "connect-timeout": "^1.9.0",
         "conventional-changelog": "^6.0.0",
@@ -61,26 +55,16 @@
         "cookie-parser": "^1.4.7",
         "cookie-session": "^2.1.0",
         "cors": "^2.8.5",
-        "enquirer": "^2.4.1",
-        "esbuild": "^0.23.1",
-        "esbuild-register": "^3.6.0",
-        "eslint": "8.57.0",
-        "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-import": "2.29.1",
-        "execa": "^9.5.2",
+        "esbuild": "^0.25.0",
         "express-session": "^1.18.1",
         "helmet": "^8.0.0",
         "lint-staged": "^15.2.10",
         "morgan": "^1.10.0",
         "multer": "1.4.5-lts.1",
-        "nodemon": "^3.1.5",
-        "prettier": "^3.3.3",
         "response-time": "^2.3.3",
-        "semver": "^7.6.3",
         "serve-favicon": "^2.5.0",
         "serve-static": "^1.16.2",
         "server-static": "^2.0.5",
-        "supertest": "^7.0.0",
         "tslib": "^2.7.0",
         "typescript": "^5.6.2",
         "vhost": "^3.0.2",
