@@ -1,7 +1,7 @@
 {
     "name": "@cmmv/middleware",
     "version": "0.4.9",
-    "main": "dist/index.js",
+    "main": "dist/main.js",
     "description": "Module for simplified use of Express middlewares",
     "scripts": {
         "build": "cmmv build",
