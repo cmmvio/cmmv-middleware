@@ -13,7 +13,7 @@ import * as serveStatic from 'serve-static';
 import * as serveFavicon from 'serve-favicon';
 import * as vhost from 'vhost';
 import helmet from 'helmet';
-import _ from "./index";
+import _ from "./main";
 
 const app = cmmv();
 
