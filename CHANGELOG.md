@@ -1,3 +1,13 @@
+# [0.5.0](https://github.com/cmmvio/cmmv-middleware/compare/v0.4.9...v0.5.0) (2025-02-20)
+
+
+### Bug Fixes
+
+* main ([da9eddd](https://github.com/cmmvio/cmmv-middleware/commit/da9eddd6b321bfe86c328236f1205268ee0774aa))
+* sample ([b222111](https://github.com/cmmvio/cmmv-middleware/commit/b2221118389b2c95e56b178079fdfc2bc507378d))
+
+
+
 ## [0.4.9](https://github.com/cmmvio/cmmv-middleware/compare/v0.4.8...v0.4.9) (2025-01-24)
 
 
